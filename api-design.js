@@ -28,15 +28,23 @@ SheetAPI.On('cell-edit', ()=>{
   
 });
 
-SheetAPI.Open('sheet_name')
-SheetAPI.Save()
 
+var sheet = SheetAPI.Open(data)
+sheet.On('cell-edit', ()=>{
+  
+});
+sheet.On('finder-init', ()=>{
+  // Open finder window init
+  
+});
+sheet.Close();
 
-// On Find in Sheet
 
 
 // Search database and show on sheet
 SheetAPI.t();
+
+
 
 
 // Sotrage
@@ -48,23 +56,9 @@ StorageAPI.Delete();
 StorageAPI.DeleteRow();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+StorageAPI.CreateSheet();
+StorageAPI.DeleteSheet();
+StogageAPI.RenameSheet();
 
 
 
