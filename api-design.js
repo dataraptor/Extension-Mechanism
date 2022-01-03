@@ -13,20 +13,17 @@ DashAPI.add_menu('hello', 'Hello', 'float-icon', null);
 DashAPI.add_menu('sub-hello', 'Sub Hello', 'float-icon', 'hello');
 
 
-DashAPI.On('init', () => {
-  
-});
+DashAPI.On('init', () => {});
+
 
 DashAPI.ShowModal()
-
 
 
 DashAPI.add_action('init', call_me);
 
 
-SheetAPI.On('cell-edit', ()=>{
-  
-});
+SheetAPI.On('cell-edit', ()=>{});
+SheetAPI.On('new-sheet', ()=>{});   // On New sheet in spreadsheet
 
 
 var sheet = SheetAPI.Open(data)
@@ -35,8 +32,8 @@ sheet.On('cell-edit', ()=>{
 });
 sheet.On('finder-init', ()=>{
   // Open finder window init
-  
 });
+sheet.On('data-needed', ()=>{});
 sheet.Close();
 
 
