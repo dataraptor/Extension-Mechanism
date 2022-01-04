@@ -60,7 +60,8 @@ StogageAPI.RenameSheet();
  
 
 
-
+SettingsAPI.Save()
+SettingsAPI.Get()
 
 
 
